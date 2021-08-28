@@ -5,7 +5,7 @@ const cors = require('cors');
 require('./database');
 
 //Settings
-app.set('port', 3000);
+app.set('port', process.env.PORT || 3000);
 
 //Middlewares
 app.use(cors());
