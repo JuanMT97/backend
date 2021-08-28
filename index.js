@@ -11,6 +11,10 @@ app.set('port', 3000);
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.json({'message': 'ok'});
+})
+
 //Routes
 app.use('/encuestas', require('./routes/index'));
 app.use('/usuarios', require('./routes/indexUsuario'));
