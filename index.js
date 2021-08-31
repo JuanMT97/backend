@@ -4,10 +4,8 @@ const cors = require('cors');
 
 require('./database');
 
-//Settings
 app.set('port', process.env.PORT || 3000);
 
-//Middlewares
 app.use(cors());
 app.use(express.json());
 
@@ -15,14 +13,12 @@ app.get('/', (req, res) => {
   res.json({'message': 'ok'});
 })
 
-//Routes
 app.use('/encuestas', require('./routes/index'));
 app.use('/usuarios', require('./routes/indexUsuario'));
 app.use('/encuestas1y2Trimestre', require('./routes/indexEncuesta1y2Trimestre'));
 app.use('/encuestas3Trimestre', require('./routes/indexEncuesta3Trimestre'));
 app.use('/encuestasNeonato', require('./routes/indexEncuestaNeonato'));
 
-// Server is listening
 app.listen(app.get('port'), () => {
     console.log('Server on port', app.get('port'));
 });
