@@ -5,12 +5,17 @@
 https://backendtpf.herokuapp.com/
 ```
 
-## Project setup
+## Ejecucion del proyecto
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
 ```
 npm run start
+```
+
+#### En caso de errores en los permisos de npm
+
+```
+npm cache clean --force
 ```
