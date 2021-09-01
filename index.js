@@ -13,7 +13,6 @@ app.get('/', (req, res) => {
   res.json({'message': 'ok'});
 })
 
-app.use('/encuestas', require('./routes/index'));
 app.use('/usuarios', require('./routes/indexUsuario'));
 app.use('/encuestas1y2Trimestre', require('./routes/indexEncuesta1y2Trimestre'));
 app.use('/encuestas3Trimestre', require('./routes/indexEncuesta3Trimestre'));
