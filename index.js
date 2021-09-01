@@ -1,8 +1,8 @@
 const express = require('express');
-const app = express();
 const cors = require('cors');
+const mongoose = require('mongoose');
 
-require('./database');
+const app = express();
 
 app.set('port', process.env.PORT || 3000);
 
@@ -17,6 +17,16 @@ app.use('/usuarios', require('./routes/indexUsuario'));
 app.use('/encuestas1y2Trimestre', require('./routes/indexEncuesta1y2Trimestre'));
 app.use('/encuestas3Trimestre', require('./routes/indexEncuesta3Trimestre'));
 app.use('/encuestasNeonato', require('./routes/indexEncuestaNeonato'));
+
+
+mongoose.connect('mongodb+srv://Juan:1234@tpf.upkyw.mongodb.net/tpf?retryWrites=true&w=majority', {
+   useNewUrlParser: true,
+   useFindAndModify: false,
+   useUnifiedTopology: true
+})
+   .then(db => console.log('DB is connected'))
+   .catch(err => console.log(err));
+
 
 app.listen(app.get('port'), () => {
     console.log('Server on port', app.get('port'));

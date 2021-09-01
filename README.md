@@ -2,7 +2,7 @@
 
 ## URL
 ```
-https://backendtpf.herokuapp.com
+https://backendtpf.herokuapp.com/
 ```
 
 ## Project setup
