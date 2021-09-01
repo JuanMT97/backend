@@ -13,9 +13,3 @@ npm install
 ```
 npm run start
 ```
-
-#### En caso de errores en los permisos de npm
-
-```
-npm cache clean --force
-```
